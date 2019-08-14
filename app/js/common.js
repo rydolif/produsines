@@ -34,59 +34,59 @@ $(function() {
     serviceCount();
   });
 
-//--------------------calculation----------------------------
-  $(".answer").each(function(index, el) {
-    $(el).addClass('answer-' + index);
+// //--------------------calculation----------------------------
+//   $(".answer").each(function(index, el) {
+//     $(el).addClass('answer-' + index);
 
-    $('.answer-' + index).on('change', function() {
+//     $('.answer-' + index).on('change', function() {
 
-      //--------------------one----------------------------
-        if(  $('.answer-one').is(':checked') ){
-          $('.services-tabs__next-one').addClass('services-tabs__next--active');
+//       //--------------------one----------------------------
+//         if(  $('.answer-one').is(':checked') ){
+//           $('.services-tabs__next-one').addClass('services-tabs__next--active');
 
-        }
-        else{
-          $('.services-tabs__next-one').removeClass('services-tabs__next--active');
-        }
+//         }
+//         else{
+//           $('.services-tabs__next-one').removeClass('services-tabs__next--active');
+//         }
 
-        //--------------------two----------------------------
-        if(  $('.answer-two').is(':checked') ){
-          $('.services-tabs__next-two').addClass('services-tabs__next--active');
-        }
-        else{
-          $('.services-tabs__next-two').removeClass('services-tabs__next--active');
-        }
+//         //--------------------two----------------------------
+//         if(  $('.answer-two').is(':checked') ){
+//           $('.services-tabs__next-two').addClass('services-tabs__next--active');
+//         }
+//         else{
+//           $('.services-tabs__next-two').removeClass('services-tabs__next--active');
+//         }
 
-        //--------------------three----------------------------
-        if(  $('.answer-three').is(':checked') ){
-          $('.services-tabs__next-three').addClass('services-tabs__next--active');
-        }
-        else{
-          $('.services-tabs__next-three').removeClass('services-tabs__next--active');
-        }
+//         //--------------------three----------------------------
+//         if(  $('.answer-three').is(':checked') ){
+//           $('.services-tabs__next-three').addClass('services-tabs__next--active');
+//         }
+//         else{
+//           $('.services-tabs__next-three').removeClass('services-tabs__next--active');
+//         }
 
-        //--------------------four----------------------------
-        if(  $('.answer-four').is(':checked') ){
-          $('.services-tabs__next-four').addClass('services-tabs__next--active');
-        }
-        else{
-          $('.services-tabs__next-four').removeClass('services-tabs__next--active');
-        }
-    });
-  });
+//         //--------------------four----------------------------
+//         if(  $('.answer-four').is(':checked') ){
+//           $('.services-tabs__next-four').addClass('services-tabs__next--active');
+//         }
+//         else{
+//           $('.services-tabs__next-four').removeClass('services-tabs__next--active');
+//         }
+//     });
+//   });
 
-  $( "#services-tab-1 input" ).on( "click", function() {
-    $( "#base" ).val( $( ".answer-one:checked" ).val());
-  });
-  $( "#services-tab-2 input" ).on( "click", function() {
-    $( "#basetwo" ).val( $( ".answer-two:checked" ).val());
-  });
-  $( "#services-tab-3 input" ).on( "click", function() {
-    $( "#basethree" ).val( $( ".answer-three:checked" ).val());
-  });
-  $( "#services-tab-4 input" ).on( "click", function() {
-    $( "#basefour" ).val( $( ".answer-four:checked" ).val());
-  });
+  // $( "#services-tab-1 input" ).on( "click", function() {
+  //   $( "#base" ).val( $( ".answer-one:checked" ).val());
+  // });
+  // $( "#services-tab-2 input" ).on( "click", function() {
+  //   $( "#basetwo" ).val( $( ".answer-two:checked" ).val());
+  // });
+  // $( "#services-tab-3 input" ).on( "click", function() {
+  //   $( "#basethree" ).val( $( ".answer-three:checked" ).val());
+  // });
+  // $( "#services-tab-4 input" ).on( "click", function() {
+  //   $( "#basefour" ).val( $( ".answer-four:checked" ).val());
+  // });
 
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
@@ -153,18 +153,18 @@ $(function() {
   });
 
 //-------------------------скорость якоря---------------------------------------
-  $(".header__list").on("click","a", function (event) {
-      event.preventDefault();
-      var id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
+  // $(".header__list").on("click","a", function (event) {
+  //     event.preventDefault();
+  //     var id  = $(this).attr('href'),
+  //         top = $(id).offset().top;
+  //     $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
+  // });
 
   $(".click").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top - 60}, 1000);
+      $('body,html').animate({scrollTop: top - 120}, 1000);
 
-  });
   });
 });

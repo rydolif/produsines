@@ -53,7 +53,7 @@ gulp.task('minjs', function() {
 		'app/libs/jquery/dist/jquery.min.js',  			//----jquery
 		'app/libs/jquery.validate.js', 					//----форма
 		'app/libs/jquery.mask.min.js', 					//----форма
-		//'app/libs/jquery.popupoverlay.js', 				//----модалки
+		'app/libs/jquery.popupoverlay.js', 				//----модалки
 		// 'app/libs/slick/slick.js', 					//----слайдер
 		'app/libs/jquery.tabslet.min.js', 				//----таби
 		 // 'app/libs/flipclock/flipclock.js',
@@ -77,7 +77,7 @@ gulp.task('js', function() {
 		'app/libs/jquery/dist/jquery.min.js',  			//----jquery
 		'app/libs/jquery.validate.js', 					//----форма
 		'app/libs/jquery.mask.min.js', 					//----форма
-		//'app/libs/jquery.popupoverlay.js', 				//----модалки
+		'app/libs/jquery.popupoverlay.js', 				//----модалки
 		// 'app/libs/slick/slick.js', 					//----слайдер
 		'app/libs/jquery.tabslet.min.js', 				//----таби
 		 // 'app/libs/flipclock/flipclock.js',			//----таймер
