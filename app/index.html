@@ -100,23 +100,28 @@
 					</div>
 				</div>
 
-				<div class="hero__footer">
+				<div class="hero__rel">
 
-					<img src="img/hero_btn.png" alt="">
+					<div class="hero__footer">
 
-					<div>
-						<a href="#" class="btn hero__btn">Скачать перезентацию</a>
-						<p>Размер 2,1 Mb, PDF</p>
+						<img src="img/hero_btn.png" alt="">
+
+						<div>
+							<a href="img/fast.jpg" class="btn hero__btn" download data-fancybox-download>Скачать перезентацию</a>
+							<p>Размер 2,1 Mb, PDF</p>
+						</div>
+						
 					</div>
-					
 				</div>
 
 			</div>
 		</section>
 
-		<section class="fast">
+		<section class="calculation" id="fast">
 
 			<div class="container">
+
+				<h2>Быстрый расчет стоимости вложений и возврата инвестиций </h2>
 
 				<form action="sendmail.php" class="form" method="POST">
 					<input type="hidden" name="subject" value="Форма калькулятора скидки">
@@ -135,6 +140,9 @@
 							</li>
 							<li>
 								<a href="#services-tab-4" class="tabs__link">Шаг 4</a>
+							</li>
+							<li>
+								<a href="#services-tab-4" class="tabs__link">Шаг 5</a>
 							</li>
 						</ul>
 
@@ -190,8 +198,20 @@
 								
 							</div> <!-----calculation__list------>
 
-							<div class="services-tabs__wrap-btn">
-								<a href="#services-tab-2" class="btn services-tabs__next services-tabs__next-one">Следующий шаг</a>
+							<div class="wrap-btn">
+
+								<div class="services-tabs__wrap-btn">
+									<a href="#services-tab-1" class="btn wrap-first">Назад</a>
+								</div>
+
+								<div class="services-tabs__wrap-btn">
+									<a href="#services-tab-2" class="btn services-tabs__next services-tabs__next-one">Вперед</a>
+								</div>
+							</div>
+
+							<div class="calculation__right">
+								<img src="img/calculation_img.png" alt="">
+								<p>Ответьте на вопросы и <br>получите расчет окупаемости</p>
 							</div>
 						</div><!----------services-tab-1-------------->
 
@@ -232,8 +252,122 @@
 								</div>
 								
 							</div>
+
+							<div class="wrap-btn">
+
+								<div class="services-tabs__wrap-btn">
+									<a href="#services-tab-1" class="btn services-tabs__prev services-tabs__prev-one">Назад</a>
+								</div>
+
+								<div class="services-tabs__wrap-btn">
+									<a href="#services-tab-2" class="btn services-tabs__next services-tabs__next-one">Вперед</a>
+								</div>
+							</div>
 							
 						</div><!-----services-tab-2-------->
+
+						<div id="services-tab-3" class="services-tab">
+
+							<div class="calculation__content">
+								<p>Кого вы планируете обучать?</p>
+							</div>
+
+							<div class="calculation__list">
+
+								<div class="calculation__item">
+									<input type="radio" name="radio1" class="answer answer-three" value="Есть помещение в собствености" id="one-3" checked="">
+									<label for="one-3" class="calculation__item_label">
+										<span>Есть помещение в собствености</span>
+									</label>
+								</div>
+
+								<div class="calculation__item">
+									<input type="radio" name="radio1" class="answer answer-three" value="Планируем арендовать" id="two-3" checked="">
+									<label for="two-3" class="calculation__item_label">
+										<span>Планируем арендовать</span>
+									</label>
+								</div>
+
+								<div class="calculation__item">
+									<input type="radio" name="radio1" class="answer answer-three" value="Еще не определился" id="three-3">
+									<label for="three-3" class="calculation__item_label">
+										<span>Еще не определился</span>
+									</label>
+								</div>
+								
+							</div>
+
+							<div class="wrap-btn">
+
+								<div class="services-tabs__wrap-btn">
+									<a href="#services-tab-1" class="btn services-tabs__prev services-tabs__prev-one">Назад</a>
+								</div>
+
+								<div class="services-tabs__wrap-btn">
+									<a href="#services-tab-2" class="btn services-tabs__next services-tabs__next-one">Вперед</a>
+								</div>
+							</div>
+							
+						</div><!-----services-tab-3-------->
+
+						<div id="services-tab-4" class="services-tab">
+
+							<div class="calculation__content">
+								<p>Кого вы планируете обучать?</p>
+							</div>
+
+							<div class="calculation__list">
+
+								<div class="calculation__item">
+									<input type="radio" name="radio1" class="answer answer-four" value="Собственый бренд" id="one-4" checked="">
+									<label for="one-4" class="calculation__item_label">
+										<span>Собственый бренд</span>
+									</label>
+								</div>
+
+								<div class="calculation__item">
+									<input type="radio" name="radio1" class="answer answer-four" value="Хотим использивать ваш" id="two-4" checked="">
+									<label for="two-4" class="calculation__item_label">
+										<span>Хотим использивать ваш</span>
+									</label>
+								</div>
+
+								<div class="calculation__item">
+									<input type="radio" name="radio1" class="answer answer-four" value="Еще не определился" id="three-4">
+									<label for="three-4" class="calculation__item_label">
+										<span>Еще не определился</span>
+									</label>
+								</div>
+								
+							</div>
+
+							<div class="wrap-btn">
+
+								<div class="services-tabs__wrap-btn">
+									<a href="#services-tab-3" class="btn services-tabs__prev services-tabs__prev-one">Назад</a>
+								</div>
+
+								<div class="services-tabs__wrap-btn">
+									<a href="#services-tab-5" class="btn services-tabs__next services-tabs__next-one">Вперед</a>
+								</div>
+							</div>
+							
+						</div><!-----services-tab-4-------->
+
+						<div id="services-tab-5" class="services-tab">
+
+							<div class="calculation__form">
+
+								<h3>Чтобы расчетать стоимость вложений и возврата инвестиций, заполните форму ниже:</h3>
+								
+								<div><input type="text" name="name" placeholder="Ваше Имя" required></div>
+
+								<div><input type="tel" name="phone" placeholder="Ваш телефон" required></div>
+
+								<div><button type="submit" class="btn footer__form_btn" name="submit">расчет стоимости</button></div>
+
+							</div>
+						</div>
 						
 					</div> <!---------services-tabs calculation__container----------->
 				</form>
@@ -247,8 +381,8 @@
 
 				<h2>Благодаря  доступности и  надежным партнерам<br> открываем учебные центры </h2>
 				<p>по всей России</p>
-				<a href="#" class="btn calcul__btn">Расчитать стоимость в регионе</a>
-				<img src="img/map.png" alt="map">
+				<div class="click"><a href="#fast" class="btn calcul__btn click">Расчитать стоимость в регионе</a></div>
+				<div class="calcul__map"><img src="img/map.png" alt="map"></div>
 				
 			</div>
 		</section>
@@ -267,7 +401,7 @@
 						<input type="tel" name="phone" required placeholder="Ваш номер телефона">
 					</div>
 					<textarea name="content" rows="5" placeholder="Опишите Вашу задачу" data-required="true" required=""></textarea>
-					<div class="question__btn">
+					<div class="question__button">
 						<button type="submit" class="btn" name="submit">Задать вопрос</button>
 					</div>
 
@@ -287,7 +421,7 @@
 	<footer class="footer">
 		<div class="container footer__container">
 
-			<div class="probis">
+			<div class="footer__probis">
 
 				<p>© 2019 ООО «PROБизнес»</p>
 				<p>Все права защищены</p>
@@ -297,7 +431,7 @@
 
 			<a href="#">Политика конфиденциальности</a>
 
-			<div class="place">
+			<div class="footer__place">
 
 				<p>ул. Менделеева, 140/1,</p>
 				<p>Уфа, Респ. Башкортостан</p>
