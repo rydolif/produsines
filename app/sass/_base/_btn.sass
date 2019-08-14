@@ -15,6 +15,21 @@
 	font-weight: 700
 	letter-spacing: .2px
 	transition: all .6s
+	z-index: 1
+	overflow: hidden
+
+	&::after
+		content: ''
+		width: 20px
+		height: 100px
+		background: linear-gradient(to right, transparent 15%, #fff 85%, transparent)
+		position: absolute
+		top: -25px
+		left: -10%
+		transform: rotate(20deg)
+		opacity: 0
+		z-index: -1
+		animation: shine 2.5s infinite linear
 
 	&:hover,
 	&:focus
@@ -25,3 +40,5 @@
 		color: $accent
 		box-shadow: 0 5px 10px rgba($text, .4)
 
+		&::after
+			background: linear-gradient(to right, transparent 15%, $accent 85%, transparent)

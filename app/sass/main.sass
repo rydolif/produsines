@@ -31,7 +31,6 @@
 		left: 25%
 		z-index: -1
 
-
 	&__container
 		position: relative
 		display: flex
@@ -44,6 +43,7 @@
 
 		img
 			margin-right: 25px
+			animation: tel 2.5s infinite linear
 
 		&_nav
 			display: flex
@@ -96,7 +96,7 @@
 		content: url(../img/hero_img.png)
 		position: absolute
 		top: -22%
-		right: -10%
+		right: 0
 
 	&::after
 		content: url(../img/hero_bef.png)
@@ -164,8 +164,26 @@
 			font-family: $fw
 			font-weight: 400
 
-	&__col
 		img
+			position: relative
+			animation: swing 3s infinite linear
+
+		.btn
+			overflow: hidden
+			z-index: 1
+
+			&::after
+				content: ''
+				width: 20px
+				height: 100px
+				background: linear-gradient(to right, transparent 15%, #fff 85%, transparent)
+				position: absolute
+				top: -25px
+				left: -10%
+				transform: rotate(20deg)
+				opacity: 0
+				z-index: -1
+				animation: shine 2.5s infinite linear
 
 
 .calculation
@@ -240,8 +258,10 @@
 			.btn
 				width: 100%
 
+
 .services-tab
 	position: relative
+
 
 .tabs-list
 	display: flex
@@ -326,6 +346,17 @@
 		left: 0
 		z-index: -1
 
+	&::after
+		content: ''
+		position: absolute
+		bottom: -50%
+		right: 40%
+		z-index: -1
+		width: 600px
+		height: 600px
+		border: 40px solid #ececec
+		border-radius: 50%
+
 	p
 		font-size: 65px
 		color: #fc0a44
@@ -381,6 +412,8 @@
 	&__button
 		text-align: right
 		margin-top: 45px
+		display: flex
+		align-items: center
 
 	&__right
 		position: relative
@@ -428,7 +461,6 @@
 				text-decoration: none
 				&::before
 					transform: scale(0)
-
 
 
 label

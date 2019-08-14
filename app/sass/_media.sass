@@ -1,11 +1,12 @@
 
+
 @media only screen and (max-width : 1440px)
 	.container
 		max-width: 1200px
 
 	.hero
 		&::before
-			left: 40%
+			left: 43%
 			top: -50%
 			right: auto
 
@@ -34,7 +35,8 @@
 	.calcul
 		padding: 50px 0 20px
 
-		&::before
+		&::before,
+		&::after
 			display: none
 
 		&__container
@@ -158,6 +160,7 @@
 
 	.calcul
 
+
 		p
 			font-size: 45px
 
@@ -265,7 +268,7 @@
 			bottom: 0
 
 			img
-				display: none
+				width: 200px
 	
 	.calculation
 		padding: 30px 0
@@ -343,6 +346,13 @@
 
 	.hero
 		padding: 25px 0
+
+		&__footer
+			.btn
+				padding: 0 15px
+
+			img
+				width: 150px
 
 		&__item
 			width: 48%
@@ -424,6 +434,15 @@
 
 	.hero
 		margin-top: 70px
+
+		&__footer
+			flex-direction: column
+
+			div
+				margin-top: 20px
+
+			p
+				margin-top: 0
 
 		&__item
 			width: 100%

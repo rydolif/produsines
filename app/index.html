@@ -156,12 +156,12 @@
 							<div class="calculation__list">
 
 								<div class="calculation__item">
-									<input type="radio" name="radio1" class="answer answer-one" value="До 50 тыс. человек" id="one" checked>
+									<input type="radio" name="radio1" class="answer answer-one" value="До 50 тыс. человек" id="one">
 									<label for="one" class="calculation__item_label">До 50 тыс. человек</label>
 								</div>
 
 								<div class="calculation__item">
-									<input type="radio" name="radio1" class="answer answer-one" value="От 50 до 100 тыс. человек" id="two" checked>
+									<input type="radio" name="radio1" class="answer answer-one" value="От 50 до 100 тыс. человек" id="two">
 									<label for="two" class="calculation__item_label">От 50 до 100 тыс. человек</label>
 								</div>
 
@@ -184,6 +184,8 @@
 									<input type="radio" name="radio1" class="answer answer-one" value="Более 1 млн. человек" id="six">
 									<label for="six" class="calculation__item_label">Более 1 млн. человек</label>
 								</div>
+
+								<input type="checkbox" name="baseone" class="answer answer-one" value="" id="base">
 								
 							</div> 
 
@@ -215,32 +217,26 @@
 							<div class="calculation__list">
 
 								<div class="calculation__item">
-									<input type="checkbox" name="radio2" class="answer answer-two" value="Дути 6-12лет" id="one-2" checked>
-									<label for="one-2" class="calculation__item_label">
-										<span>Дути 6-12лет</span>
-									</label>
+									<input type="radio" name="radio2" class="answer answer-two" value="Дeти 6-12 лет" id="one-2">
+									<label for="one-2" class="calculation__item_label">Дeти 6-12 лет</label>
 								</div>
 
 								<div class="calculation__item">
-									<input type="checkbox" name="radio2" class="answer answer-two" value="Подростки 12-17 лет" id="two-2">
-									<label for="two-2" class="calculation__item_label">
-										<span>Подростки 12-17 лет</span>
-									</label>
+									<input type="radio" name="radio2" class="answer answer-two" value="Подростки 12-17 лет" id="two-2">
+									<label for="two-2" class="calculation__item_label">Подростки 12-17 лет</label>
 								</div>
 
 								<div class="calculation__item">
-									<input type="checkbox" name="radio2" class="answer answer-two" value="Взрослое насиление" id="three-2">
-									<label for="three-2" class="calculation__item_label">
-										<span>Взрослое насиление</span>
-									</label>
+									<input type="radio" name="radio2" class="answer answer-two" value="Взрослое насиление" id="three-2">
+									<label for="three-2" class="calculation__item_label"><span>Взрослое насиление</label>
 								</div>
 
 								<div class="calculation__item">
-									<input type="checkbox" name="radio2" class="answer answer-two" value="Еще не определился" id="four-2">
-									<label for="four-2" class="calculation__item_label">
-										<span>Еще не определился</span>
-									</label>
+									<input type="radio" name="radio2" class="answer answer-two" value="Еще не определился" id="four-2">
+									<label for="four-2" class="calculation__item_label">Еще не определился</label>
 								</div>
+
+								<input type="checkbox" name="basetwo" class="answer answer-one" value="" id="basetwo">
 								
 							</div>
 
@@ -284,6 +280,8 @@
 									<input type="radio" name="radio1" class="answer answer-three" value="Еще не определился" id="three-3">
 									<label for="three-3" class="calculation__item_label">Еще не определился</label>
 								</div>
+
+								<input type="checkbox" name="basethree" class="answer answer-one" value="" id="basethree">
 								
 							</div>
 
@@ -314,7 +312,7 @@
 							<div class="calculation__list">
 
 								<div class="calculation__item">
-									<input type="radio" name="radio1" class="answer answer-four" value="Собственый бренд" id="one-4" checked>
+									<input type="radio" name="radio1" class="answer answer-four" value="Собственый бренд" id="one-4">
 									<label for="one-4" class="calculation__item_label">Собственый бренд</label>
 								</div>
 
@@ -327,6 +325,8 @@
 									<input type="radio" name="radio1" class="answer answer-four" value="Еще не определился" id="three-4">
 									<label for="three-4" class="calculation__item_label">Еще не определился</label>
 								</div>
+
+								<input type="checkbox" name="basefour" class="answer answer-four" value="" id="basefour">
 								
 							</div>
 
@@ -384,7 +384,7 @@
 				
 			</div>
 			
-		</section> <!---Fast---->
+		</section>
 
 		<section class="calcul">
 			<div class="container calcul__container">
@@ -402,9 +402,9 @@
 
 				<form action="sendmail.php" class="form question__form" method="post">
 
-					<h3>Затрудняетесь с выбором?</h3>
+					<h2>Затрудняетесь с выбором?</h2>
 					<p>Опишите вкратце какую задачу вам необходимо решить <br>и получите консультацию нашего специалиста </p>
-					<input type="hidden" name="subject" value="Узнать подробнее!">
+					<input type="hidden" name="subject" value="Затрудняетесь с выбором?">
 					<div class="question__input">
 						<div class="relative">
 							<input type="text" name="name" placeholder="Ваше имя" required>
@@ -455,6 +455,17 @@
 			
 		</div>
 	</footer>
+
+	<!-- modal -->
+		<div class="modal" id="thanks">
+			<button class="close thanks_close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+			<h3>Спасибо за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
+	<!-- modal end-->
 
 	<script src="js/scripts.min.js"></script>
 </body>

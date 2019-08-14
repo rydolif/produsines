@@ -1,45 +1,61 @@
 .modal
 	position: relative
-	overflow: hidden
-	max-width: 320px
+	max-width: 420px
+	width: 100%
 	height: auto
-	padding: 50px
+	padding: 30px
+	border-radius: 30px
 	background-color: #fff
 	z-index: 1
+
+	h3, p
+		text-align: center
+
+	h3
+		font-size: 22px
+		color: $accent
+
+	p
+		font-size: 18px
 
 .close
 	position: absolute
 	right: -13px
 	top: -13px
 	display: block
-	width: 30px
-	height: 30px
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.33)
-	background-color: #ffffff
+	width: 48px
+	height: 48px
+	background-color: #c4c4c4
 	border-radius: 50%
 	border: none
 	cursor: pointer
+	transition: all .6s
 
 	&:hover, &:focus
 		outline: none
+		transform: rotate(90deg)
 
-		&::before,
-		&::after
-			height: 14px
+		span
+			background-color: $accent
 
-
-	&::before,
-	&::after
-		content: ''
+	span
+		display: block
 		position: absolute
-		height: 12px
-		width: 2px
-		background: #000
-		transition: all .3s
+		left: 50%
+		top: 50%
+		background: #fff
+		transition: all .6s
+		border-radius: 4px
+		height: 22px
+		width: 4px
 
-	&::before
-		transform: translate(-50%, -50%) rotate(45deg)
+		&:first-child
+			transform: translate(-50%, -50%) rotate(45deg)
 
-	&::after
-		transform: translate(-50%, -50%) rotate(-45deg)
+
+		&:last-child
+			transform: translate(-50%, -50%) rotate(-45deg)
+
+
 

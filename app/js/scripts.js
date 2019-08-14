@@ -7726,6 +7726,11 @@ S:{pattern:/[a-zA-Z]/}}};a.jMaskGlobals=a.jMaskGlobals||{};h=a.jMaskGlobals=a.ex
 
 $(function() {
 
+
+
+
+
+
 //--------------------calculation-tab---------------------------
   $('.services-tabs').tabslet({
     animation: true,
@@ -7760,62 +7765,23 @@ $(function() {
     serviceCount();
   });
 
-// //--------------------calculation----------------------------
-//   $(".answer").each(function(index, el) {
-//     $(el).addClass('answer-' + index);
-
-//     $('.answer-' + index).on('change', function() {
-
-//       //--------------------one----------------------------
-//         if(  $('.answer-one').is(':checked') ){
-//           $('.services-tabs__next-one').addClass('services-tabs__next--active');
-
-//         }
-//         else{
-//           $('.services-tabs__next-one').removeClass('services-tabs__next--active');
-//         }
-
-//         //--------------------two----------------------------
-//         if(  $('.answer-two').is(':checked') ){
-//           $('.services-tabs__next-two').addClass('services-tabs__next--active');
-//         }
-//         else{
-//           $('.services-tabs__next-two').removeClass('services-tabs__next--active');
-//         }
-
-//         //--------------------three----------------------------
-//         if(  $('.answer-three').is(':checked') ){
-//           $('.services-tabs__next-three').addClass('services-tabs__next--active');
-//         }
-//         else{
-//           $('.services-tabs__next-three').removeClass('services-tabs__next--active');
-//         }
-
-//         //--------------------four----------------------------
-//         if(  $('.answer-four').is(':checked') ){
-//           $('.services-tabs__next-four').addClass('services-tabs__next--active');
-//         }
-//         else{
-//           $('.services-tabs__next-four').removeClass('services-tabs__next--active');
-//         }
-//     });
-//   });
-
-  // $( "#services-tab-1 input" ).on( "click", function() {
-  //   $( "#base" ).val( $( ".answer-one:checked" ).val());
-  // });
-  // $( "#services-tab-2 input" ).on( "click", function() {
-  //   $( "#basetwo" ).val( $( ".answer-two:checked" ).val());
-  // });
-  // $( "#services-tab-3 input" ).on( "click", function() {
-  //   $( "#basethree" ).val( $( ".answer-three:checked" ).val());
-  // });
-  // $( "#services-tab-4 input" ).on( "click", function() {
-  //   $( "#basefour" ).val( $( ".answer-four:checked" ).val());
-  // });
-
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
+
+//------------------------------------отправка инпутов-------------------------------------------
+
+  $( "#services-tab-1 input" ).on( "click", function() {
+    $( "#base" ).val( $( ".answer-one:checked" ).val());
+  });
+  $( "#services-tab-2 input" ).on( "click", function() {
+    $( "#basetwo" ).val( $( ".answer-two:checked" ).val());
+  });
+  $( "#services-tab-3 input" ).on( "click", function() {
+    $( "#basethree" ).val( $( ".answer-three:checked" ).val());
+  });
+  $( "#services-tab-4 input" ).on( "click", function() {
+    $( "#basefour" ).val( $( ".answer-four:checked" ).val());
+  });
 
 //------------------------------------form-------------------------------------------
   $('input[type="tel"]').mask('+0 (000) 000-00-00');
@@ -7844,7 +7810,13 @@ $(function() {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
-          content: jQuery('.form-' + index).find("input[name=content]").val(),
+          content: jQuery('.form-' + index).find("textarea[name=content]").val(),
+
+          baseone: jQuery('.form-' + index).find("input[name=baseone]").val(),
+          basetwo: jQuery('.form-' + index).find("input[name=basetwo]").val(),
+          basethree: jQuery('.form-' + index).find("input[name=basethree]").val(),
+          basefour: jQuery('.form-' + index).find("input[name=basefour]").val(),
+         
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
