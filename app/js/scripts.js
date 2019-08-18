@@ -7727,9 +7727,12 @@ S:{pattern:/[a-zA-Z]/}}};a.jMaskGlobals=a.jMaskGlobals||{};h=a.jMaskGlobals=a.ex
 $(function() {
 
 
-
-
-
+$('.tabs_open').click(function() {
+  $('#tabs').toggleClass('calculation__wrap--active');
+});
+$('.tabs_close').click(function() {
+  $('.services-tab__wrap').removeClass('services-tab__wrap--active');
+});
 
 //--------------------calculation-tab---------------------------
   $('.services-tabs').tabslet({
@@ -7772,15 +7775,33 @@ $(function() {
 
   $( "#services-tab-1 input" ).on( "click", function() {
     $( "#base" ).val( $( ".answer-one:checked" ).val());
+    $( "#services-tab-1 a" ).removeClass('disabled');
   });
-  $( "#services-tab-2 input" ).on( "click", function() {
-    $( "#basetwo" ).val( $( ".answer-two:checked" ).val());
+
+  $( "#input1 input" ).on( "click", function() {
+    $( "#input-1" ).val( $( ".input1:checked" ).val());
+    $( "#services-tab-2 a" ).removeClass('disabled');
   });
+  $( "#input2 input" ).on( "click", function() {
+    $( "#input-2" ).val( $( ".input2:checked" ).val());
+    $( "#services-tab-2 a" ).removeClass('disabled');
+  });
+  $( "#input3 input" ).on( "click", function() {
+    $( "#input-3" ).val( $( ".input3:checked" ).val());
+    $( "#services-tab-2 a" ).removeClass('disabled');
+  });
+  $( "#input4 input" ).on( "click", function() {
+    $( "#input-4" ).val( $( ".input4:checked" ).val());
+    $( "#services-tab-2 a" ).removeClass('disabled');
+  });
+
   $( "#services-tab-3 input" ).on( "click", function() {
     $( "#basethree" ).val( $( ".answer-three:checked" ).val());
+    $( "#services-tab-3 a" ).removeClass('disabled');
   });
   $( "#services-tab-4 input" ).on( "click", function() {
     $( "#basefour" ).val( $( ".answer-four:checked" ).val());
+    $( "#services-tab-4 a" ).removeClass('disabled');
   });
 
 //------------------------------------form-------------------------------------------
@@ -7804,22 +7825,64 @@ $(function() {
       messages: {
         name: "Введите Ваше имя",
         phone: "Введите Ваш телефон",
-        content: "Введите Ваш вапрос"
+        content: "Введите Ваш вапрос",
+        sity: "Введите Ваш город",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
           content: jQuery('.form-' + index).find("textarea[name=content]").val(),
+          sity: jQuery('.form-' + index).find("textarea[name=sity]").val(),
 
           baseone: jQuery('.form-' + index).find("input[name=baseone]").val(),
-          basetwo: jQuery('.form-' + index).find("input[name=basetwo]").val(),
           basethree: jQuery('.form-' + index).find("input[name=basethree]").val(),
           basefour: jQuery('.form-' + index).find("input[name=basefour]").val(),
+
+          inputone: jQuery('.form-' + index).find("input[name=input-one]").val(),
+          inputtwo: jQuery('.form-' + index).find("input[name=input-two]").val(),
+          inputthree: jQuery('.form-' + index).find("input[name=input-three]").val(),
+          inputfour: jQuery('.form-' + index).find("input[name=input-four]").val(),
          
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
+      }
+    });
+
+  });
+
+  $(".form--order").each(function(index, el) {
+    $(el).addClass('form--order' + index);
+
+    $('.form--order' + index).validate({
+      rules: {
+        phone: {
+          required: true,
+          phoneno: true
+        },
+        name: 'required',
+      },
+      messages: {
+        name: "Введите Ваше имя",
+        phone: "Введите Ваш телефон",
+        content: "Введите Ваш вапрос"
+      },
+      submitHandler: function(form) {
+        var t = {
+          name: jQuery('.form--order' + index).find("input[name=name]").val(),
+          phone: jQuery('.form--order' + index).find("input[name=phone]").val(),
+          content: jQuery('.form--order' + index).find("textarea[name=content]").val(),
+
+          baseone: jQuery('.form--order' + index).find("input[name=baseone]").val(),
+          basetwo: jQuery('.form--order' + index).find("input[name=basetwo]").val(),
+          basethree: jQuery('.form--order' + index).find("input[name=basethree]").val(),
+          basefour: jQuery('.form--order' + index).find("input[name=basefour]").val(),
+         
+          subject: jQuery('.form--order' + index).find("input[name=subject]").val()
+        };
+        ajaxSend('.form--order' + index, t);
+        Send('.form--order' + index, t);
       }
     });
 
@@ -7840,6 +7903,24 @@ $(function() {
     });
   }
 
+  function Send(formName, data) {
+    $.ajax({
+        url: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/172905/test.pdf',
+        method: 'GET',
+        xhrFields: {
+            responseType: 'blob'
+        },
+        success: function (data) {
+            var a = document.createElement('a');
+            var url = window.URL.createObjectURL(data);
+            a.href = url;
+            a.download = 'myfile.pdf';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+    });
+  };
+
 //----------------------------------------fixed----------------------------------
   $(window).scroll(function(){
       if($(this).scrollTop()>20){
@@ -7849,14 +7930,6 @@ $(function() {
           $('.header').removeClass('header--active');
       }
   });
-
-//-------------------------скорость якоря---------------------------------------
-  // $(".header__list").on("click","a", function (event) {
-  //     event.preventDefault();
-  //     var id  = $(this).attr('href'),
-  //         top = $(id).offset().top;
-  //     $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
-  // });
 
   $(".click").on("click","a", function (event) {
       event.preventDefault();

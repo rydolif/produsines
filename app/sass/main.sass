@@ -197,6 +197,53 @@
 		margin-bottom: 80px
 		font-size: 40px
 
+	&__wrap
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		opacity: 0
+		z-index: -1
+
+		&--active
+			position: relative
+			opacity: 1
+			z-index: 1
+
+	&__step
+		width: 35%
+		margin-left: 15%
+
+		h2, h3, p
+			text-align: center
+			line-height: 1.1
+			margin-bottom: 15px !important
+
+		h2
+			color: $accent
+			font-size: 26px !important
+
+		h3
+			font-size: 18px
+
+		p
+			font-size: 18px
+
+		input
+			width: 100%
+			text-align: center
+
+		.btn
+			width: 100%
+
+		a
+			color: $accent
+
+		div
+			position: relative
+			margin-bottom: 20px
+
 	&__content
 		margin-bottom: 80px
 
@@ -262,11 +309,35 @@
 .services-tab
 	position: relative
 
+	&__wrap
+		opacity: 0
+		z-index: -1
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+
+		&--active
+			position: relative
+			opacity: 1
+			z-index: 1
+
 
 .tabs-list
+	position: relative
 	display: flex
 	align-items: center
 	margin-bottom: 75px
+
+	&::before
+		content: ''
+		position: absolute
+		right: 0
+		top: 0
+		left: 0
+		bottom: 0
+		z-index: 1
 
 	li
 		margin-right: 70px
@@ -302,23 +373,31 @@
 			line-height: 1
 			height: 60px
 			line-height: 60px
-
-			&:hover,
-			&:focus
-				background-color: rgba($accent, .65)
-				color: #fff
-
+	
 	.active
 		a
 			background-color: #fc0a44 !important
 			color: #fff
 			transition: all .3s
 
-.wrap
+.wrap-btn
+	display: flex
+	justify-content: center
 
-	&-btn
-		display: flex
-		justify-content: center
+	a
+
+
+	.disabled
+		pointer-events: none /* делаем элемент неактивным для взаимодействия */
+		cursor: default /*  курсор в виде стрелки */
+		background-color: #fff
+		color: #c7c7c7
+		transition: all .3s
+		border: 2px solid #c7c7c7
+
+
+
+
 
 .wrap-first,
 .services-tabs__prev

@@ -107,7 +107,7 @@
 						<img src="img/hero_btn.png" alt="">
 
 						<div>
-							<a href="img/fast.jpg" class="btn hero__btn" download data-fancybox-download>Скачать перезентацию</a>
+							<a href="#" class="btn hero__btn order_open">Скачать перезентацию</a>
 							<p>Размер 2,1 Mb, PDF</p>
 						</div>
 						
@@ -118,7 +118,6 @@
 		</section>
 
 		<section class="calculation" id="fast">
-
 			<div class="container">
 
 				<h2>Быстрый расчет стоимости вложений и возврата инвестиций </h2>
@@ -140,9 +139,6 @@
 							</li>
 							<li>
 								<a href="#services-tab-4" class="tabs__link">Шаг 4</a>
-							</li>
-							<li>
-								<a href="#services-tab-5" class="tabs__link">Шаг 5</a>
 							</li>
 						</ul>
 						
@@ -192,12 +188,8 @@
 							<!-----calculation__list------>
 							<div class="wrap-btn">
 
-								<div class="services-tabs__wrap-btn click">
-									<a href="#services-tab-1" class="btn wrap-first">Назад</a>
-								</div>
-
-								<div class="services-tabs__wrap-btn click">
-									<a href="#services-tab-2" class="btn services-tabs__next services-tabs__next-one">Вперед</a>
+								<div class="services-tabs__wrap-btn wrap-btn--next click">
+									<a href="#services-tab-2" class="disabled btn services-tabs__next services-tabs__next-one">Вперед</a>
 								</div>
 							</div>
 
@@ -216,27 +208,30 @@
 
 							<div class="calculation__list">
 
-								<div class="calculation__item">
-									<input type="radio" name="radio2" class="answer answer-two" value="Дeти 6-12 лет" id="one-2">
+								<div class="calculation__item" id="input1">
+									<input type="checkbox" name="checkbox1" class="answer input1" value="Дeти 6-12 лет" id="one-2">
 									<label for="one-2" class="calculation__item_label">Дeти 6-12 лет</label>
 								</div>
 
-								<div class="calculation__item">
-									<input type="radio" name="radio2" class="answer answer-two" value="Подростки 12-17 лет" id="two-2">
+								<div class="calculation__item" id="input2">
+									<input type="checkbox" name="checkbox2" class="answer input2" value="Подростки 12-17 лет" id="two-2">
 									<label for="two-2" class="calculation__item_label">Подростки 12-17 лет</label>
 								</div>
 
-								<div class="calculation__item">
-									<input type="radio" name="radio2" class="answer answer-two" value="Взрослое насиление" id="three-2">
-									<label for="three-2" class="calculation__item_label"><span>Взрослое насиление</label>
+								<div class="calculation__item" id="input3">
+									<input type="checkbox" name="checkbox3" class="answer input3" value="Взрослое насиление" id="three-2">
+									<label for="three-2" class="calculation__item_label">Взрослое насиление</label>
 								</div>
 
-								<div class="calculation__item">
-									<input type="radio" name="radio2" class="answer answer-two" value="Еще не определился" id="four-2">
+								<div class="calculation__item" id="input4">
+									<input type="checkbox" name="checkbox4" class="answer input4" value="Еще не определился" id="four-2">
 									<label for="four-2" class="calculation__item_label">Еще не определился</label>
 								</div>
 
-								<input type="checkbox" name="basetwo" class="answer answer-one" value="" id="basetwo">
+								<input type="checkbox" name="input-one" class="answer" value="" id="input-1">
+								<input type="checkbox" name="input-two" class="answer" value="" id="input-2">
+								<input type="checkbox" name="input-three" class="answer" value="" id="input-3">
+								<input type="checkbox" name="input-four" class="answer" value="" id="input-4">
 								
 							</div>
 
@@ -247,7 +242,7 @@
 								</div>
 
 								<div class="services-tabs__wrap-btn click">
-									<a href="#services-tab-3" class="btn services-tabs__next services-tabs__next-one">Вперед</a>
+									<a href="#services-tab-3" class="btn disabled services-tabs__next services-tabs__next-one">Вперед</a>
 								</div>
 							</div>
 
@@ -267,7 +262,7 @@
 							<div class="calculation__list">
 
 								<div class="calculation__item">
-									<input type="radio" name="radio1" class="answer answer-three" value="Есть помещение в собствености" id="one-3" checked>
+									<input type="radio" name="radio1" class="answer answer-three" value="Есть помещение в собствености" id="one-3">
 									<label for="one-3" class="calculation__item_label">Есть помещение в собствености</label>
 								</div>
 
@@ -292,7 +287,7 @@
 								</div>
 
 								<div class="services-tabs__wrap-btn click">
-									<a href="#services-tab-4" class="btn services-tabs__next services-tabs__next-one">Вперед</a>
+									<a href="#services-tab-4" class="disabled btn services-tabs__next services-tabs__next-one">Вперед</a>
 								</div>
 							</div>
 
@@ -304,72 +299,40 @@
 
 						<!-----services-tab-4-------->
 						<div id="services-tab-4" class="services-tab">
-
-							<div class="calculation__content">
-								<p>Кого вы планируете обучать?</p>
-							</div>
-
-							<div class="calculation__list">
-
-								<div class="calculation__item">
-									<input type="radio" name="radio1" class="answer answer-four" value="Собственый бренд" id="one-4">
-									<label for="one-4" class="calculation__item_label">Собственый бренд</label>
+							
+							<div class="services-tab__wrap services-tab__wrap--active">
+								<div class="calculation__content">
+									<p>Кого вы планируете обучать?</p>
 								</div>
 
-								<div class="calculation__item">
-									<input type="radio" name="radio1" class="answer answer-four" value="Хотим использивать ваш" id="two-4">
-									<label for="two-4" class="calculation__item_label">Хотим использивать ваш</label>
-								</div>
-
-								<div class="calculation__item">
-									<input type="radio" name="radio1" class="answer answer-four" value="Еще не определился" id="three-4">
-									<label for="three-4" class="calculation__item_label">Еще не определился</label>
-								</div>
-
-								<input type="checkbox" name="basefour" class="answer answer-four" value="" id="basefour">
-								
-							</div>
-
-							<div class="wrap-btn">
-
-								<div class="services-tabs__wrap-btn click">
-									<a href="#services-tab-3" class="btn services-tabs__prev services-tabs__prev-one">Назад</a>
-								</div>
-
-								<div class="services-tabs__wrap-btn click">
-									<a href="#services-tab-6" class="btn services-tabs__next services-tabs__next-one">Вперед</a>
-								</div>
-							</div>
-
-							<div class="calculation__right">
-								<img src="img/calculation_img.png" alt="">
-								<p>Ответьте на вопросы и <br>получите расчет окупаемости</p>
-							</div>
-						</div>
-						
-						<!-----services-tab-5-------->
-						<div id="services-tab-5" class="services-tab">
-
-							<div class="calculation__form question__form form">
-
-								<div class="question__input">
-									<div class="relative">
-										<input type="text" name="name" placeholder="Ваше имя" required>
+								<div class="calculation__list">
+									<div class="calculation__item">
+										<input type="radio" name="radio1" class="answer answer-four" value="Собственый бренд" id="one-4">
+										<label for="one-4" class="calculation__item_label">Собственый бренд</label>
 									</div>
-									<div class="relative">
-										<input type="tel" name="phone" required placeholder="Ваш номер телефона">
+
+									<div class="calculation__item">
+										<input type="radio" name="radio1" class="answer answer-four" value="Хотим использивать ваш" id="two-4">
+										<label for="two-4" class="calculation__item_label">Хотим использивать ваш</label>
 									</div>
-								</div>
-								<div class="relative">
-									<textarea name="content" placeholder="Опишите Вашу задачу" required></textarea>
-								</div>
-								<div class="question__button click">
-									<a href="#services-tab-3" class="btn services-tabs__prev services-tabs__prev-one">Назад</a>
-									<button type="submit" class="btn" name="submit">Задать вопрос</button>
+
+									<div class="calculation__item">
+										<input type="radio" name="radio1" class="answer answer-four" value="Еще не определился" id="three-4">
+										<label for="three-4" class="calculation__item_label">Еще не определился</label>
+									</div>
+
+									<input type="checkbox" name="basefour" class="answer answer-four" value="" id="basefour">
 								</div>
 
 								<div class="wrap-btn">
-									
+
+									<div class="services-tabs__wrap-btn click">
+										<a href="#services-tab-3" class="btn services-tabs__prev services-tabs__prev-one">Назад</a>
+									</div>
+
+									<div class="">
+										<a href="javascript: void(0)" class="btn disabled tabs_close tabs_open">Вперед</a>
+									</div>
 								</div>
 
 								<div class="calculation__right">
@@ -377,13 +340,34 @@
 									<p>Ответьте на вопросы и <br>получите расчет окупаемости</p>
 								</div>
 							</div>
+
+							<div class="calculation__wrap" id="tabs">
+								<div class="calculation__step modal--step">
+									<h3>Отлично остался последний шаг и формы для ввода</h3>
+									<input type="hidden" name="subject" value="Узнать подробнее!">
+									<div class="relative">
+										<input type="text" name="name" placeholder="Ваше имя" required>
+									</div>
+									<div class="relative">
+										<input type="tel" name="phone" required placeholder="+7-(999)-999-99-99">
+									</div>
+									<div class="form__btn">
+										<button type="submit" class="btn tabs_close" name="submit">Получить расчет</button>
+									</div>
+									<p><a href="#" target="_blank">Ваши данные в безопастности</a></p>
+								</div>
+								<div class="calculation__right">
+									<img src="img/calculation_img.png" alt="">
+									<p>Ответьте на вопросы и <br>получите расчет окупаемости</p>
+								</div>
+							</div>
 						</div>
-						
+					
 					</div>
+
 				</form>
 				
 			</div>
-			
 		</section>
 
 		<section class="calcul">
@@ -391,7 +375,7 @@
 
 				<h2>Благодаря  доступности и  надежным партнерам<br> открываем учебные центры </h2>
 				<p>по всей России</p>
-				<div class="click"><a href="#fast" class="btn calcul__btn click">Расчитать стоимость в регионе</a></div>
+				<div class=""><a href="#" class="btn calcul__btn price_open">Расчитать стоимость в регионе</a></div>
 				<div class="calcul__map"><img src="img/map.png" alt="map"></div>
 				
 			</div>
@@ -457,12 +441,59 @@
 	</footer>
 
 	<!-- modal -->
+		<div class="modal" id="price">
+			<button class="close price_close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<form action="sendmail.php" class="form" method="post">
+				<h2>Расчет стоимости вложений</h2>
+				<input type="hidden" name="subject" value="Узнать подробнее!">
+				<div class="relative">
+					<input type="text" name="name" placeholder="Ваше имя" required>
+				</div>
+				<div class="relative">
+					<input type="tel" name="phone" placeholder="+7-(999)-999-99-99" required>
+				</div>
+				<div class="relative">
+					<input type="text" name="sity" placeholder="Ваш город" required>
+				</div>
+				<div class="form__btn">
+					<button type="submit" class="btn" name="submit">Получить расчет</button>
+				</div>
+				<p><a href="#" target="_blank">Ваши данные в безопастности</a></p>
+			</form>
+		</div>
+		<div class="modal" id="order">
+			<form action="sendmail.php" class="form--order" method="post">
+
+				<button class="close order_close" type="button">
+					<span></span>
+					<span></span>
+				</button>
+
+				<h2>Загрузите прайс-лиcт</h2>
+				<h3>ПРАЙС ЗАГРУЗИТСЯ АВТОМАТИЧЕСКИ ПОСЛЕ ЗАПОЛНЕНИЯ ДАННЫХ</h3>
+				<p>* за номером телефона закрепляется персональный доступ к прайсу</p>
+				<input type="hidden" name="subject" value="Узнать подробнее!">
+
+				<div class="">
+					<input type="tel" name="phone" required placeholder="+7-(999)-999-99-99">
+				</div>
+				<div class="form__btn">
+					<button type="submit" class="btn" name="submit">Отправить</button>
+				</div>
+				<p><a href="#" target="_blank">Ваши данные в безопастности</a></p>
+
+			</form>
+		</div>
 		<div class="modal" id="thanks">
 			<button class="close thanks_close" type="button">
 				<span></span>
 				<span></span>
 			</button>
-			<h3>Спасибо за доверие!</h3>
+			<h2>Спасибо за доверие!</h2>
 			<p>Мы обязательно с вами свяжемся!</p>
 		</div>
 	<!-- modal end-->

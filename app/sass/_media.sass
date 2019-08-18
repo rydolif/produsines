@@ -170,6 +170,10 @@
 
 
 	.calculation
+		&__step
+			width: 50%
+			margin-left: 0
+
 		&__right
 			top: 50%
 			transform: translate(0, -50%)
@@ -188,7 +192,7 @@
 				margin-bottom: 0
 
 	.wrap-btn
-		justify-content: flex-start
+		justify-content: center
 
 	.question__input
 		flex-wrap: wrap
@@ -272,6 +276,9 @@
 	
 	.calculation
 		padding: 30px 0
+		&__step
+			width: 70%
+			margin: 0 auto
 
 		&__right
 			display: none
@@ -285,6 +292,7 @@
 
 	.tabs-list
 		margin-bottom: 20px
+		justify-content: center
 
 
 	.calcul
@@ -314,6 +322,12 @@
 
 		&__input
 			flex-direction: column
+
+		&__button
+			width: 100%
+
+			.btn
+				width: 100%
 
 	.tabs-list
 		li
@@ -382,23 +396,21 @@
 
 
 @media only screen and (max-width : 480px)
+
 	.tabs-list
 		flex-wrap: wrap
 
 		li
-			width: 100%
-			margin-right: 0
 			text-align: center
 			margin-bottom: 10px
 
-			&::before
-				top: 100%
-				left: 50%
-				transform: translate(-50%, 0)
-				width: 1px
-				height: 10px
+			a
+				padding: 0 5px
 
 	.calculation
+		&__step
+			width: 100%
+
 		h2
 			margin-bottom: 20px
 
@@ -421,7 +433,6 @@
 
 				&:last-child
 					margin-right: 0
-
 
 	.header
 
@@ -457,6 +468,7 @@
 
 		.btn
 			padding: 0 25px
+			width: 100%
 
 	.calcul
 		padding: 20px 0
