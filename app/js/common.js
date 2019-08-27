@@ -3,6 +3,7 @@ $(function() {
 
 $('.tabs_open').click(function() {
   $('#tabs').toggleClass('calculation__wrap--active');
+  $('.tabs-list').addClass('tabs-list__opacity');
 });
 $('.tabs_close').click(function() {
   $('.services-tab__wrap').removeClass('services-tab__wrap--active');
@@ -204,6 +205,10 @@ $('.tabs_close').click(function() {
           $('.header').removeClass('header--active');
       }
   });
+
+  if($(this).scrollTop()>20){
+      $('.header').addClass('header--active');
+  }
 
   $(".click").on("click","a", function (event) {
       event.preventDefault();
